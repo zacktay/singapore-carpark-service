@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: carpark-service
+  profiles:
+    active: dev
+  cloud:
+    config:
+      username: user
+      password: s3cr3t
+      uri: http://localhost:8888
+      label: master
+
+logging:
+  level:
+    root: DEBUG
