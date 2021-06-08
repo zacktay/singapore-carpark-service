@@ -9,7 +9,6 @@ import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -51,7 +50,7 @@ public class CarparkCsvParser {
     }
 
     public List<Carpark> getCarparks() throws IOException {
-        Reader in = new FileReader(new File(fileLocation));
+        Reader in = new FileReader(fileLocation);
         return CSVFormat.DEFAULT
                 .withHeader(HEADERS)
                 .withFirstRecordAsHeader()

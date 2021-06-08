@@ -20,7 +20,7 @@ public enum ParkingSystemType {
         return Stream.of(values())
                      .filter(each -> each.getDescription().equalsIgnoreCase(description))
                      .findFirst()
-                     .orElseThrow(() -> new RuntimeException("No Parking System Type that matches decriptiont " + description));
+                     .orElseThrow(() -> new RuntimeException("No Parking System Type that matches decription " + description));
     }
 
 }
